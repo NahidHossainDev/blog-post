@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+.avatar{
+  background-color: rgb(235, 92, 40) !important;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a:hover{
+  text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#mobile-menu-icon{
+  visibility: hidden;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card{
+  padding:10px;
+  margin: 10px 0;
+  border:1px solid lightgray;
+  color:rgb(80, 80, 80);
 }
-
-.App-link {
-  color: #61dafb;
+.col-md-3{
+  padding:0;
+  background-color: #4a5dca;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.col-md-9{
+  height:90vh;
+  overflow: auto;
+  background-color: #ecf2ff;
+}
+img{
+  height:150px;
+  width: 150px;
+  border-radius: 50%;
+  margin:200px auto;
+  display: block;
+}
+input,textarea{
+  display: block;
+  width:100%;
+}
+.MuiDataGrid-iconSeparator,
+.MuiDataGrid-sortIcon{
+  opacity: 1 !important;
 }

@@ -1,0 +1,29 @@
+nav li{
+    list-style: none;
+    padding:5px 15px;
+    margin: 0.6rem 0;
+    font-weight:600;
+    color:whitesmoke;
+}
+nav .active,
+nav li:hover{
+    background-color: #dae5ff;
+    color:#7b7c7f;
+    border-radius: 5px;
+    transform: translateX(15px);
+    transition: 0.20s;
+    cursor: pointer;
+}
+nav .active{
+    border-left:7px solid orange;
+    background-color: #ecf2ff;
+}
+nav li img{
+    margin-right:30px;
+    width:1rem;
+}
+.MuiDrawer-paper{
+    background-color: #4a5dca !important;
+    width: 25%;
+    padding-top: 50px;
+}
