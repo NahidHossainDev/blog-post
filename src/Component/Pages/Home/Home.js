@@ -7,7 +7,7 @@ const Home = () => {
   const [load, setLoad] = useState(false);
 
   useEffect(() => {
-    fetch(`http://jsonplaceholder.typicode.com/posts?_start=${postData.length}&_limit=10`)
+    fetch(`https://jsonplaceholder.typicode.com/posts?_start=${postData.length}&_limit=10`)
       .then((res) => res.json())
       .then((data) => setPostData([...postData, ...data]));
   }, [load])

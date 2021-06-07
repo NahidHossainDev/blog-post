@@ -7,14 +7,7 @@ const UserDetail = () => {
   const [sortModel, setSortModel] = useState([]);
   const [search, setSearch] = useState("")
   const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   const api = "http://jsonplaceholder.typicode.com/users";
-  //   const searchApi = `http://jsonplaceholder.typicode.com/users?q=${search}`;
-  //    fetch(searchApi)
-  //      .then((res) => res.json())
-  //      .then((data) => setUserData(data));
-  // }, [search])
-  
+
   useEffect(() => {
     // getting data from session storage
     setPageSize(getSessionStorageOrDefault("pageSize", 3));
@@ -65,7 +58,7 @@ const UserDetail = () => {
     (async () => {
       setLoading(true);
 
-      await  fetch(`http://jsonplaceholder.typicode.com/users?q=${search}`)
+      await  fetch(`https://jsonplaceholder.typicode.com/users?q=${search}`)
        .then((res) => res.json())
        .then((data) => setUserData(data));;
 

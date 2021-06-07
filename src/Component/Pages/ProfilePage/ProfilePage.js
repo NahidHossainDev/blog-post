@@ -20,16 +20,11 @@ const ProfilePage = () => {
         fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
           .then((res) => res.json())
           .then((d) => setUserData(d));
-        
-        // // get user posts
-        // fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
-        //   .then((res) => res.json())
-        //   .then((d) => setPost(d));
     }, [])
   
     useEffect(() => {
       fetch(
-        `http://jsonplaceholder.typicode.com/posts?userId=${id}&_start=${load}&_limit=5`
+        `https://jsonplaceholder.typicode.com/posts?userId=${id}&_start=${load}&_limit=5`
       )
         .then((res) => res.json())
         .then((data) => setPost(data));
