@@ -8,19 +8,19 @@ import "./NavBar.css";
 import { ContextElement } from '../../App';
 import { useLocation } from "react-router-dom";
 
-function HeaderView() {
- 
-}
 const NavBar = () => {
 
   const location = useLocation();
-  console.log(location.pathname);
   
   const [myUserId] = useContext(ContextElement);
   return (
     <nav>
       <Link to="/home">
-        <li className={location.pathname === "/home" && "active"}>
+        <li
+          className={
+            location.pathname === "/" ? "active" : location.pathname === "/home" && "active"
+          }
+        >
           <HomeIcon /> Home
         </li>
       </Link>

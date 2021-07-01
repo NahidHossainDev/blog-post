@@ -17,8 +17,8 @@ function App() {
     <ContextElement.Provider value={[myUserId]}>
       <Router>
         <AppHeader />
-        <div className="container mt-5 d-flex">
-          <div className="col-md-3">
+        <div className="container-xl mt-5 d-flex">
+          <div className="col-md-3 hide">
             <NavBar />
           </div>
           <div className="col-md-9">

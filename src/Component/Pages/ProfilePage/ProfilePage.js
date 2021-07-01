@@ -1,10 +1,13 @@
-import { Avatar } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
+import {Avatar } from '@material-ui/core';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import "./ProfilePage.css";
 import PostCard from "../../Common/PostCard/PostCard";
 import loading from "../../Media/01-progress.gif";
 import Modal from "../../Common/Modal/Modal"
+import UploadNewPost from '../../Common/UploadNewPost/UploadNewPost';
+import { ContextElement } from '../../../App';
+
 
 const ProfilePage = () => {
 
@@ -14,13 +17,15 @@ const ProfilePage = () => {
   const [modalData, setModalData] = useState({ title: "", body: "" });
   const [load, setLoad] = useState(0);
   const { id } = useParams();
- 
+
+  const [myUserId] = useContext(ContextElement);
+
     useEffect(() => {
         //get user detail
         fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
           .then((res) => res.json())
           .then((d) => setUserData(d));
-    }, [])
+    }, [id])
   
     useEffect(() => {
       fetch(
@@ -28,7 +33,7 @@ const ProfilePage = () => {
       )
         .then((res) => res.json())
         .then((data) => setPost(data));
-    }, [load]);
+    }, [load || id]);
   
     return (
       <div className="profilePage">
@@ -53,6 +58,7 @@ const ProfilePage = () => {
           <img src={loading} alt="" />
         )}
         <hr />
+        {id === myUserId && <UploadNewPost/>}
         {post.map((d) => (
           <PostCard
             data={d}

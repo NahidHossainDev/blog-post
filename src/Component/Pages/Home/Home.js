@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PostCard from "../../Common/PostCard/PostCard";
+import UploadNewPost from "../../Common/UploadNewPost/UploadNewPost";
 import Loading from "../../Media/01-progress.gif";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
 
     return (
       <div>
+        <UploadNewPost/>
         {postData.length > 1 ? (
           postData.map((d, i) => <PostCard data={d} key={i} />)
         ) : (

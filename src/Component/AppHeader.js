@@ -8,7 +8,7 @@ const AppHeader = () => {
         <div className="d-flex justify-content-between py-2">
           <NavDrawer id="mobile-menu-icon" />
           <h5>Blog Post App</h5>
-          <Avatar className="avatar">N</Avatar>
+          <Avatar className="avatar">B</Avatar>
         </div>
       </div>
     </AppBar>

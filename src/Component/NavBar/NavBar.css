@@ -22,8 +22,11 @@ nav li img{
     margin-right:30px;
     width:1rem;
 }
+.mobile-menu-btn{
+  visibility: hidden;
+}
 .MuiDrawer-paper{
     background-color: #4a5dca !important;
-    width: 25%;
+    width: 60%;
     padding-top: 50px;
 }
